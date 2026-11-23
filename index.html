@@ -370,9 +370,9 @@
 
         <!-- Matched Pill Download Button -->
         <a
-          class="btn btn-primary btn-nav resume-link"
-          download="Ankit_Rathod_Senior_Full_Stack_Engineer_Resume.txt"
-          href="#"
+          class="btn btn-primary btn-nav"
+          download="./AR-CV-2026.pdf"
+          href="Ankit_Rathod_Resume.pdf"
         >
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -398,9 +398,9 @@
 
         <div class="cta-row">
           <a
-            class="btn btn-primary resume-link"
-            download="Ankit_Rathod_Senior_Full_Stack_Engineer_Resume.txt"
-            href="#"
+            class="btn btn-primary"
+            download="./AR-CV-2026.pdf"
+            href="Ankit_Rathod_Resume.pdf"
           >
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -611,68 +611,7 @@
     }
 
     syncSwitchUI();
-
-    // Synchronous Resume Download Setup
-    (function setupResumeLinks() {
-      const resumeText = [
-        "ANKIT RATHOD",
-        "Senior Full Stack Engineer | Node.js • React.js • TypeScript • Python",
-        "Ahmedabad, Gujarat, India | +91 88662 31313 | ankit.rathod.2313@gmail.com",
-        "LinkedIn: linkedin.com/in/ankit-a-rathod | Portfolio: ankitrathod.dev",
-        "",
-        "PROFESSIONAL SUMMARY",
-        "Senior Full Stack Engineer with 5+ years of experience architecting, scaling, and migrating high-traffic SaaS communication platforms. Deep expertise in MERN (MongoDB, Express.js, React.js, Node.js), TypeScript, Python, Redis caching, real-time WebSocket systems, VoIP telephony APIs, and idempotent subscription billing (ChargeBee, Stripe).",
-        "",
-        "TECHNICAL SKILLS",
-        "- Core Stack: JavaScript (ES6+), TypeScript, Node.js, React.js, Python, SQL, PHP, HTML5, CSS3",
-        "- Backend & Real-Time: Express.js, Django, REST APIs, Microservices, WebSockets, Socket.IO, Pusher, VoIP APIs, JWT, RBAC",
-        "- Databases & Caching: MongoDB (Schema Design, Compound Indexes, Aggregation Pipelines), Redis (Caching, Pub/Sub), MySQL",
-        "- Billing & Cloud: ChargeBee, Stripe, Idempotent Webhooks, AWS (S3, CodePipeline), Docker, GitHub Actions, Jenkins, CI/CD",
-        "- AI Tooling: Claude Code, Claude API, Cursor AI, GitHub Copilot",
-        "",
-        "EXPERIENCE",
-        "Senior Full Stack Engineer | AppItSimple Technologies LLP — Ahmedabad, India (Mar 2024 – Oct 2026)",
-        "- Architected multi-channel routing microservices (Voice, SMS, WhatsApp, Email) for ControlHippo with 99.9% uptime.",
-        "- Implemented Redis caching layers, reducing MongoDB read load by ~40%.",
-        "- Owned ChargeBee billing webhooks and reconciliation jobs, reducing manual billing work by ~70%.",
-        "- Built a shared React + TypeScript component library, cutting duplicated frontend effort by ~40%.",
-        "- Introduced Claude Code & Cursor AI workflows and integrated Claude API for automated ticket summarization.",
-        "",
-        "Software Engineer | AppItSimple Infotek Pvt Ltd — Ahmedabad, India (Apr 2022 – Feb 2024)",
-        "- Led zero-data-loss migration of 5,000+ CallHippo business accounts to the modernized SaaS platform.",
-        "- Reduced P95 API response times by ~45% via MongoDB compound indexes and aggregation pipeline tuning.",
-        "- Engineered WebSocket call-status pipelines with retry/backoff, boosting call connection reliability by ~15%.",
-        "- Raised automated unit-test coverage from ~55% to 80%.",
-        "",
-        "Software Engineer | Morpich Design LLP — Surat, India (Jan 2021 – Feb 2022)",
-        "- Built Python/Django REST APIs, MySQL schemas, and Stripe payment integrations for Skote e-commerce.",
-        "",
-        "EDUCATION",
-        "Master of Computer Applications (MCA) — Gujarat Technological University (GTU), Ahmedabad | Aug 2020",
-        "Bachelor of Computer Applications (BCA) — Maharaja Krishnakumarsinhji Bhavnagar University | Jun 2015"
-      ].join("\n");
-
-      const dataUri = "data:text/plain;charset=utf-8," + encodeURIComponent(resumeText);
-      const links = document.querySelectorAll(".resume-link");
-
-      links.forEach((link) => {
-        link.setAttribute("href", dataUri);
-      });
-
-      if (window.location.protocol.startsWith("http")) {
-        fetch("./Ankit_Rathod_Resume.pdf", { method: "HEAD" })
-          .then((res) => {
-            if (res.ok) {
-              links.forEach((link) => {
-                link.setAttribute("href", "./AR-CV-2026.pdf");
-                link.setAttribute("download", "Ankit_Rathod_Senior_Full_Stack_Engineer_Resume.pdf");
-              });
-            }
-          })
-          .catch(() => {});
-      }
-    })();
-
+    
     function copyEmail() {
       navigator.clipboard.writeText('ankit.rathod.2313@gmail.com');
       const btn = document.getElementById('copyBtn');
